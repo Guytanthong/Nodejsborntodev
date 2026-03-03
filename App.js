@@ -13,7 +13,13 @@ app.set("view engine", "ejs")
 
 
 productRouter.route("/").get((req, res) => {
-    res.render("products");
+    res.render("products", {
+        products: [
+            {productTitle: 'Fender Stratocaster', productDescription: 'Fender player series'},
+            {productTitle: 'Fender Telecaster', productDescription: 'Fender player series'},
+            {productTitle: 'Fender Jazzmaster', productDescription: 'Fender player series'},
+        ]
+    });
 });
 
 productRouter.route("/1").get((req, res) => {

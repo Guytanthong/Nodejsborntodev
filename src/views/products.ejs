@@ -12,12 +12,12 @@
       href="assets/images/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/animate.css" />
     <link rel="stylesheet" href="./src/css/tailwind.css" />
 
     <!-- ==== WOW JS ==== -->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
@@ -33,7 +33,7 @@
           <div class="max-w-full px-4 w-60">
             <a href="index.html" class="block w-full py-5 navbar-logo">
               <img
-                src="assets/images/logo/logo-white.svg"
+                src="../assets/images/logo/logo-white.svg"
                 alt="logo"
                 class="w-full header-logo"
               />
@@ -278,7 +278,15 @@
     </div>
     <!-- ====== Navbar Section End -->
 
-
+  <section class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+      <div class="container px-4 mx-auto">
+          <h1>Hello</h1>
+          <% products.map((product)=> { %>
+          <h2><%=product.productTitle%></h2>
+        <p><%=product.productDescription%></p>
+      <%})%>
+        </div>
+    </section>
     
     <!-- ====== Footer Section Start -->
     <footer
@@ -294,7 +302,7 @@
                 class="mb-6 inline-block max-w-[160px]"
               >
                 <img
-                  src="assets/images/logo/logo-white.svg"
+                  src="../assets/images/logo/logo-white.svg"
                   alt="logo"
                   class="max-w-full"
                 />

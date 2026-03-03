@@ -13,7 +13,7 @@ app.set("view engine", "ejs")
 
 
 productRouter.route("/").get((req, res) => {
-    res.send("Hello world Im Products");
+    res.render("products");
 });
 
 productRouter.route("/1").get((req, res) => {

@@ -4,15 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" :"set DEBUG=app & node App.js",
-    "debug" : "set DEBUG=* & node App.js",
+    "start": "set DEBUG=app & nodemon App.js",
+    "debug": "set DEBUG=* & nodemon App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
+    "ejs": "^4.0.1",
     "express": "^5.2.1",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": 2000,
+    "env": {
+      "PORT": 3000
+    }
   }
 }
